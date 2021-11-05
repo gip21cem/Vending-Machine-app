@@ -1,0 +1,5 @@
+1,Coke can,145,1
+2,Fanta can,145,2
+3,still water,95,1
+4,Mars bar,125,3
+5,Kinder Bueno bar,120,2

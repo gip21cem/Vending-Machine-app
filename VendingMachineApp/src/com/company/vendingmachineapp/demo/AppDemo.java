@@ -6,17 +6,16 @@ import com.company.vendingmachineapp.view.VendingMachineView;
 
 
 public class AppDemo {
-    public static void main (String[] args) throws NoItemInventoryException {
-        VendingMachineAppDAO myImpl = new VendingMachineAppDAOImpl();
-        VendingMachineView myView = new VendingMachineView();
+    public static void main (String[] args) {
+        
+         AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext();
+        // tell Spring where to start looking for annotation
+        appContext.scan("com.company.vendingmachineapp");
+        appContext.refresh();
 
-        // constructor based dependency injection
-        // the first parameter of controller constructor is of type interface
-        // the argument passed is of the type of the class that implements that interface
-        VendingMachineAppController myCtrl = new VendingMachineAppController(myImpl, myView);
-
-        // call the method in VendingMachineAppController
-        // to run the full application
+        // use appContext to instantiate the application controller
+        VendingMachineAppController myCtrl = appContext.getBean("vendingMachineAppController", VendingMachineAppController.class);
         myCtrl.run();
+        
     }
 }

@@ -5,10 +5,12 @@ import com.company.vendingmachineapp.dto.VendingMachineItem;
 import com.company.vendingmachineapp.view.VendingMachineView;
 import java.util.*;
 
+@Component
 public class VendingMachineAppController {
     private VendingMachineAppDAO myDAO;
     private VendingMachineView myView;
 
+    @Autowired
     public VendingMachineAppController(VendingMachineAppDAO myDAO, VendingMachineView myView) {
         this.myDAO = myDAO;
         this.myView = myView;

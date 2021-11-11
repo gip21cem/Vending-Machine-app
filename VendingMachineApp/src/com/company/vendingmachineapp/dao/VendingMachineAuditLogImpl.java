@@ -3,6 +3,7 @@ package com.company.vendingmachineapp.dao;
 import java.io.*;
 import java.time.LocalDateTime;
 
+@Component
 public class VendingMachineAuditLogImpl implements VendingMachineAuditLog {
 
     private static final File auditLogFile = new File("F:\\Mthree\\VendingMachineApp\\VendingMachineAuditLog.txt");

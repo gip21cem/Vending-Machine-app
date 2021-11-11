@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class VendingMachineAppDAOImpl implements VendingMachineAppDAO{
 
     private static final List<VendingMachineItem> inventoryList = new ArrayList<>();

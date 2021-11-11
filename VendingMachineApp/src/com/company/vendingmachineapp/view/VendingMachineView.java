@@ -5,6 +5,7 @@ import com.company.vendingmachineapp.dto.*;
 import java.util.List;
 import java.util.Scanner;
 
+@Component
 public class VendingMachineView {
 
     VendingMachineAppDAOImpl myImpl = new VendingMachineAppDAOImpl();
